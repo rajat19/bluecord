@@ -8,9 +8,9 @@ TOKEN = my_settings.BOT_AUTH_TOKEN
 
 client = discord.Client()
 
-
 @client.event
 async def on_message(message):
+    print(f'message {message}')
     # we do not want the bot to reply to itself
     if message.author == client.user:
         return
@@ -54,4 +54,4 @@ async def on_ready():
     print(client.user.name)
     print('------')
 
-client.run(my_settings.BOT_AUTH_TOKEN)
+client.run(TOKEN)
