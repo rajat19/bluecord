@@ -42,7 +42,7 @@ async def on_message(message):
         # print(results)
         if(len(results) > 0):
             keywords = 'Your matching search results are: \n' + \
-                ' \n'.join([x[1] for x in results])
+                ' \n'.join([x[2] for x in results])
         else:
             keywords = 'No matching results found'
         await message.channel.send(keywords)
